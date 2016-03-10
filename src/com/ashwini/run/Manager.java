@@ -34,7 +34,7 @@ public class Manager {
 
 			case 1:
 				Book b = new Book();
-				
+
 				Adder<Object> addBook = new AddBook();
 				addBook.add(store, b);
 				break;
@@ -102,11 +102,16 @@ public class Manager {
 					Collections.sort(store, Book.BookPublisherComparator);
 					display(store);
 					break;
-
+				default:
+					System.out.println(" Give the input between 1 to 4 ");
+					break;
 				}
 				break;
-
+			default:
+				System.out.println(" Give the input between 1 to 6 ");
+				break;
 			}
+
 		} while (choice != 6);
 
 	}

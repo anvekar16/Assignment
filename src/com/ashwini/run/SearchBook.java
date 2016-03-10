@@ -8,8 +8,10 @@ public class SearchBook {
 
 	public int search(List<Book> store, String searchBookName) {
 		// TODO Auto-generated method stub
+		String name;
 		for (Book b1 : store) {
-			if (b1.name.contains(searchBookName)) {
+			name = b1.getName();
+			if (name.contains(searchBookName)) {
 				System.out.println(b1);
 				System.out.println(" Success in searching");
 				return 1;

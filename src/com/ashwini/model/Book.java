@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Book {
 
-	public String name;
+	String name;
 	String author;
 	String publisher;
 	Float price;
@@ -26,8 +26,38 @@ public class Book {
 		System.out.println("Give price of book");
 		this.price = in.nextFloat();
 
-		
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
+	public Float getPrice() {
+		return price;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
 	}
 
 	@Override
@@ -44,7 +74,7 @@ public class Book {
 			return bookName1.compareTo(bookName2);
 		}
 	};
-	
+
 	public static Comparator<Book> BookPriceComparator = new Comparator<Book>() {
 		public int compare(Book b1, Book b2) {
 
